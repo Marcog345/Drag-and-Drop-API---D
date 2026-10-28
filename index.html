@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Nutricional</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="game-container">
+        <div class="header">
+            <h2>🍎 Desafio Nutricional</h2>
+            <p class="score-text">Pontuação: <span id="score">0</span></p>
+        </div>
+
+        <div class="items-container" id="items">
+            <!-- Itens saudáveis -->
+            <div class="item" draggable="true" id="apple" data-type="healthy">🍎 Maçã</div>
+            <div class="item" draggable="true" id="banana" data-type="healthy">🍌 Banana</div>
+            <!-- Itens não saudáveis -->
+            <div class="item" draggable="true" id="burger" data-type="junk">🍔 Hambúrguer</div>
+            <div class="item" draggable="true" id="soda" data-type="junk">🥤 Refrigerante</div>
+        </div>
+
+        <div class="drop-zone" id="dropZone">
+            <p>🥣 Solte apenas frutas e vegetais aqui!</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

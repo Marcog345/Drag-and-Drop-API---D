@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.game-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 450px;
+}
+
+.header h2 {
+    color: #000;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.score-text {
+    color: #0056b3;
+    font-weight: bold;
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+
+.items-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 8px 15px;
+    cursor: grab;
+    user-select: none;
+    font-size: 14px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.item:active {
+    cursor: grabbing;
+}
+
+.item.dragging {
+    opacity: 0.5;
+    transform: scale(1.05);
+}
+
+.drop-zone {
+    border: 2px dashed #28a745;
+    background-color: #f8fff9;
+    border-radius: 8px;
+    padding: 40px 20px;
+    color: #495057;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+/* Classe adicionada via JS quando um item está sobre a zona */
+.drop-zone.over {
+    background-color: #e2fce8;
+    border-color: #1e7e34;
+}
